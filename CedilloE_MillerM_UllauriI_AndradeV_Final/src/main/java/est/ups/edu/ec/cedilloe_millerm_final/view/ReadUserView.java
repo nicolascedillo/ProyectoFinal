@@ -34,7 +34,7 @@ public class ReadUserView extends javax.swing.JFrame {
         jScrollPane1.setVerticalScrollBarPolicy(
             JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
         );
-        this.getContentPane().setBackground(new Color(98, 159, 173));
+        this.getContentPane().setBackground(new Color(84, 119, 146));
     }
 
     /**
@@ -53,9 +53,9 @@ public class ReadUserView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblTitle.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Users Panel");
+        lblTitle.setText("Read Users");
 
         tblUsers.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         tblUsers.setModel(new javax.swing.table.DefaultTableModel(
@@ -72,8 +72,8 @@ public class ReadUserView extends javax.swing.JFrame {
         tblUsers.setToolTipText("");
         jScrollPane1.setViewportView(tblUsers);
 
-        btnGoBack.setBackground(new java.awt.Color(247, 55, 79));
-        btnGoBack.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        btnGoBack.setBackground(new java.awt.Color(248, 116, 116));
+        btnGoBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnGoBack.setText("Go Back");
         btnGoBack.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 

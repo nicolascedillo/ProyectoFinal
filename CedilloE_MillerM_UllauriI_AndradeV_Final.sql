@@ -1,5 +1,5 @@
-CREATE DATABASE control_prueba;
-  
+CREATE DATABASE control_acceso;
+
 USE control_acceso;
 
 CREATE TABLE datos (

@@ -5,6 +5,7 @@
 package est.ups.edu.ec.cedilloe_millerm_final.view;
 
 import est.ups.edu.ec.cedilloe_millerm_final.controller.ChangeWaitingTimeController;
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -28,6 +29,7 @@ public class ChangeWaitingTimeView extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         controller = new ChangeWaitingTimeController(this);
         setSpinnerDefaultValues();
+        this.getContentPane().setBackground(new Color(84, 119, 146));
     }
     
 
@@ -50,16 +52,17 @@ public class ChangeWaitingTimeView extends javax.swing.JFrame {
         spnTime = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
         txtActTime = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCancel.setBackground(new java.awt.Color(255, 51, 51));
-        btnCancel.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        btnCancel.setBackground(new java.awt.Color(248, 116, 116));
+        btnCancel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnCancel.setText("Cancel");
         btnCancel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnChange.setBackground(new java.awt.Color(237, 237, 206));
-        btnChange.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        btnChange.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnChange.setText("Change");
         btnChange.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnChange.addActionListener(new java.awt.event.ActionListener() {
@@ -68,22 +71,27 @@ public class ChangeWaitingTimeView extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Constantia", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Change Waiting Time Panel");
+        jLabel1.setText("Change Waiting Time ");
 
-        jLabel4.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Unit of time: ");
 
-        jLabel2.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("New Time:");
 
+        cbxUnitTime.setBackground(new java.awt.Color(237, 237, 206));
         cbxUnitTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seg", "min", "hr", "day" }));
 
-        jLabel3.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Actual Time:");
 
         txtActTime.setEditable(false);
+        txtActTime.setBackground(new java.awt.Color(237, 237, 206));
         txtActTime.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -93,12 +101,12 @@ public class ChangeWaitingTimeView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(btnChange, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
+                        .addComponent(btnChange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
+                        .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
@@ -108,7 +116,8 @@ public class ChangeWaitingTimeView extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbxUnitTime, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(spnTime)
-                            .addComponent(txtActTime))))
+                            .addComponent(txtActTime)))
+                    .addComponent(jSeparator1))
                 .addGap(33, 33, 33))
         );
         layout.setVerticalGroup(
@@ -116,7 +125,9 @@ public class ChangeWaitingTimeView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addGap(9, 9, 9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtActTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
@@ -132,7 +143,7 @@ public class ChangeWaitingTimeView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancel)
                     .addComponent(btnChange))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -150,6 +161,7 @@ public class ChangeWaitingTimeView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSpinner spnTime;
     private javax.swing.JTextField txtActTime;
     // End of variables declaration//GEN-END:variables

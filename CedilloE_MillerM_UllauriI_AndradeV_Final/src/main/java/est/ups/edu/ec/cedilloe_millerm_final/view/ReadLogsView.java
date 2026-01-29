@@ -6,6 +6,7 @@ package est.ups.edu.ec.cedilloe_millerm_final.view;
 
 import com.toedter.calendar.JDateChooser;
 import est.ups.edu.ec.cedilloe_millerm_final.controller.ReadLogsController;
+import java.awt.Color;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import javax.swing.JButton;
@@ -42,6 +43,7 @@ public class ReadLogsView extends javax.swing.JFrame {
         jScrollPane2.setVerticalScrollBarPolicy(
             JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
         );
+        this.getContentPane().setBackground(new Color(84, 119, 146));
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,25 +64,28 @@ public class ReadLogsView extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblLogs = new javax.swing.JTable();
         btnGrafica = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblTitle.setFont(new java.awt.Font("Constantia", 0, 18)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Logs Panel");
+        lblTitle.setText("Logs ");
 
         btnGoBack.setBackground(new java.awt.Color(237, 237, 206));
-        btnGoBack.setFont(new java.awt.Font("Constantia", 0, 14)); // NOI18N
+        btnGoBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnGoBack.setForeground(new java.awt.Color(102, 102, 0));
         btnGoBack.setText("Go Back");
         btnGoBack.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jdDate_start.setDateFormatString("dd-MM-yyyy HH:mm:ss");
 
-        lblStart.setFont(new java.awt.Font("Constantia", 0, 14)); // NOI18N
+        lblStart.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        lblStart.setForeground(new java.awt.Color(255, 255, 255));
         lblStart.setText("Start");
 
-        lblEnd.setFont(new java.awt.Font("Constantia", 0, 14)); // NOI18N
+        lblEnd.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        lblEnd.setForeground(new java.awt.Color(255, 255, 255));
         lblEnd.setText("End");
 
         jdDate_end.setDateFormatString("dd-MM-yyyy HH:mm:ss");
@@ -100,7 +105,7 @@ public class ReadLogsView extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "id", "usuario_id", "fecha_hora", "acceso"
+                "ID", "ID usuario", "Fecha", "Acceso"
             }
         ));
         tblLogs.setToolTipText("");
@@ -108,23 +113,24 @@ public class ReadLogsView extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tblLogs);
 
         btnGrafica.setBackground(new java.awt.Color(204, 255, 204));
-        btnGrafica.setFont(new java.awt.Font("Constantia", 0, 14)); // NOI18N
+        btnGrafica.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnGrafica.setForeground(new java.awt.Color(0, 102, 0));
-        btnGrafica.setText("Grafica");
+        btnGrafica.setText("Graphic");
         btnGrafica.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane2)
                                 .addGap(1, 1, 1))
@@ -150,6 +156,8 @@ public class ReadLogsView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
@@ -181,6 +189,7 @@ public class ReadLogsView extends javax.swing.JFrame {
     private javax.swing.JButton btnGrafica;
     private javax.swing.JButton btnSearch;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     private com.toedter.calendar.JDateChooser jdDate_end;
     private com.toedter.calendar.JDateChooser jdDate_start;
     private javax.swing.JLabel lblEnd;

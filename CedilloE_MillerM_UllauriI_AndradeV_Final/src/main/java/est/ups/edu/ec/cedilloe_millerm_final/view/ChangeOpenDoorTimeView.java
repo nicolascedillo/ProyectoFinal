@@ -5,6 +5,7 @@
 package est.ups.edu.ec.cedilloe_millerm_final.view;
 
 import est.ups.edu.ec.cedilloe_millerm_final.controller.ChangeOpenDoorTimeController;
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -28,6 +29,7 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
         controller = new ChangeOpenDoorTimeController(this);
         setSpinnerDefaultValues();
         setLocationRelativeTo(null);
+        this.getContentPane().setBackground(new Color(84, 119, 146));
     }
 
     /**
@@ -57,6 +59,7 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
         btnChangeDoor = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         jLabel2.setText("New Time:");
 
@@ -83,24 +86,28 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel5.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("New Time:");
 
+        cbxUnitTimeDoor.setBackground(new java.awt.Color(237, 237, 206));
         cbxUnitTimeDoor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seg", "min", "hr", "day" }));
 
-        jLabel6.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Actual Time:");
 
         txtActTimeDoor.setEditable(false);
+        txtActTimeDoor.setBackground(new java.awt.Color(237, 237, 206));
         txtActTimeDoor.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        btnCancelDoor.setBackground(new java.awt.Color(255, 51, 51));
-        btnCancelDoor.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        btnCancelDoor.setBackground(new java.awt.Color(248, 116, 116));
+        btnCancelDoor.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnCancelDoor.setText("Cancel");
         btnCancelDoor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnChangeDoor.setBackground(new java.awt.Color(237, 237, 206));
-        btnChangeDoor.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        btnChangeDoor.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnChangeDoor.setText("Change");
         btnChangeDoor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnChangeDoor.addActionListener(new java.awt.event.ActionListener() {
@@ -109,11 +116,12 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Constantia", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Change Waiting Time Panel");
+        jLabel7.setText("Change Door Time");
 
-        jLabel8.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Unit of time: ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -123,12 +131,12 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(btnChangeDoor, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
+                        .addComponent(btnChangeDoor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCancelDoor, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
+                        .addComponent(btnCancelDoor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
@@ -138,7 +146,8 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbxUnitTimeDoor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(spnTimeDoor)
-                            .addComponent(txtActTimeDoor))))
+                            .addComponent(txtActTimeDoor)))
+                    .addComponent(jSeparator1))
                 .addGap(33, 33, 33))
         );
         layout.setVerticalGroup(
@@ -146,7 +155,9 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
-                .addGap(9, 9, 9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtActTimeDoor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
@@ -162,7 +173,7 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnChangeDoor)
                     .addComponent(btnCancelDoor, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -191,6 +202,7 @@ public class ChangeOpenDoorTimeView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSpinner spnTime;
     private javax.swing.JSpinner spnTimeDoor;
     private javax.swing.JTextField txtActTime;

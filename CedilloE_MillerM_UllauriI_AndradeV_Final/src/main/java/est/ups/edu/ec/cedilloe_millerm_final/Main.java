@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Iniciar Vista");
         iniciarVista();
         System.out.println("Conexion BDD");
-        //coneccionBDD();
+        coneccionBDD();
         System.out.println("Conexion Arduino");
         //conexionArduino();
         

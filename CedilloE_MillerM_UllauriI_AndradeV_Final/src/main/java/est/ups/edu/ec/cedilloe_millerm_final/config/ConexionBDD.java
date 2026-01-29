@@ -14,9 +14,9 @@ import java.sql.SQLException;
  */
 public class ConexionBDD {
     
-    private static final String URL = "jdbc:mysql://localhost:3306/control_acceso?useSSL=false&serverTimezone=UTC";
+    private static final String URL = "jdbc:mysql://localhost:3306/control_acceso";
     private static final String USER = "root";
-    private static final String PASSWORD = "CedilloE_MillerM#Final2025";
+    private static final String PASSWORD = "root";
     
     public static Connection getConexion(){
         Connection con = null;

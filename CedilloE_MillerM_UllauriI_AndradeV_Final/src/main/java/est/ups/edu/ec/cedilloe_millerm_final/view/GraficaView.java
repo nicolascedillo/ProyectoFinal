@@ -5,6 +5,7 @@
 package est.ups.edu.ec.cedilloe_millerm_final.view;
 
 import est.ups.edu.ec.cedilloe_millerm_final.controller.GraficaController;
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -23,6 +24,7 @@ public class GraficaView extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         controller = new GraficaController(this);
+        this.getContentPane().setBackground(new Color(84, 119, 146));
     }
 
     /**
@@ -43,7 +45,7 @@ public class GraficaView extends javax.swing.JFrame {
         panelChart.setLayout(new java.awt.BorderLayout());
 
         btnCancel.setBackground(new java.awt.Color(237, 237, 206));
-        btnCancel.setFont(new java.awt.Font("Constantia", 0, 18)); // NOI18N
+        btnCancel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         btnCancel.setText("Exit");
         btnCancel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 

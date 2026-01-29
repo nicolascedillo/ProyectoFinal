@@ -24,7 +24,7 @@ public class MenuView extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         controller = new MenuController(this);
-        this.getContentPane().setBackground(new Color(98, 159, 173));
+        this.getContentPane().setBackground(new Color(84, 119, 146));
     }
 
     /**
@@ -36,6 +36,7 @@ public class MenuView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparator3 = new javax.swing.JSeparator();
         lblTitle = new javax.swing.JLabel();
         btnReadUsers = new javax.swing.JButton();
         btnCreateUser = new javax.swing.JButton();
@@ -49,56 +50,64 @@ public class MenuView extends javax.swing.JFrame {
         lblLogs = new javax.swing.JLabel();
         btnLogOut = new javax.swing.JButton();
         btnChangeDoorTime = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(98, 159, 173));
 
-        lblTitle.setFont(new java.awt.Font("Constantia", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Welcome to Menu Panel");
+        lblTitle.setText("Menu Panel");
 
         btnReadUsers.setBackground(new java.awt.Color(237, 237, 206));
-        btnReadUsers.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnReadUsers.setText("Read Users");
+        btnReadUsers.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        btnReadUsers.setText("Read");
 
         btnCreateUser.setBackground(new java.awt.Color(237, 237, 206));
-        btnCreateUser.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnCreateUser.setText("Create User");
+        btnCreateUser.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        btnCreateUser.setText("Create ");
 
         btnUpdateUser.setBackground(new java.awt.Color(237, 237, 206));
-        btnUpdateUser.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnUpdateUser.setText("Update User");
+        btnUpdateUser.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        btnUpdateUser.setText("Update");
 
         btnDeleteUser.setBackground(new java.awt.Color(237, 237, 206));
-        btnDeleteUser.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnDeleteUser.setText("Delete User");
+        btnDeleteUser.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        btnDeleteUser.setText("Delete");
 
         btnChangeWaitingTime.setBackground(new java.awt.Color(237, 237, 206));
-        btnChangeWaitingTime.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnChangeWaitingTime.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnChangeWaitingTime.setText("Change Waiting Time");
 
         btnChangeAttempts.setBackground(new java.awt.Color(237, 237, 206));
-        btnChangeAttempts.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnChangeAttempts.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnChangeAttempts.setText("Change Attempts");
 
         btnViewLogs.setBackground(new java.awt.Color(237, 237, 206));
-        btnViewLogs.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnViewLogs.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnViewLogs.setText("View Logs");
 
-        lblUser.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        lblUser.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        lblUser.setForeground(new java.awt.Color(255, 255, 255));
         lblUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblUser.setText("User");
 
-        lblSettings.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        lblSettings.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        lblSettings.setForeground(new java.awt.Color(255, 255, 255));
         lblSettings.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSettings.setText("General Settings");
 
-        lblLogs.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        lblLogs.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        lblLogs.setForeground(new java.awt.Color(255, 255, 255));
         lblLogs.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLogs.setText("Logs");
 
-        btnLogOut.setBackground(new java.awt.Color(255, 51, 51));
-        btnLogOut.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnLogOut.setBackground(new java.awt.Color(248, 116, 116));
+        btnLogOut.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -108,65 +117,87 @@ public class MenuView extends javax.swing.JFrame {
         });
 
         btnChangeDoorTime.setBackground(new java.awt.Color(237, 237, 206));
-        btnChangeDoorTime.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnChangeDoorTime.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         btnChangeDoorTime.setText("Change Open Door Time");
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLogOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(lblUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnCreateUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnUpdateUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnReadUsers, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDeleteUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnDeleteUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnChangeWaitingTime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnChangeAttempts, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnChangeDoorTime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(12, 12, 12)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnViewLogs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblLogs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(25, 25, 25))
+                            .addComponent(lblLogs, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                            .addComponent(btnViewLogs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(8, 8, 8))
+                    .addComponent(jSeparator1))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(lblTitle)
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUser)
-                    .addComponent(lblSettings)
-                    .addComponent(lblLogs))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCreateUser)
-                    .addComponent(btnChangeWaitingTime)
-                    .addComponent(btnViewLogs))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnReadUsers)
-                    .addComponent(btnChangeAttempts, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdateUser)
-                    .addComponent(btnChangeDoorTime))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnDeleteUser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jSeparator4)
+                    .addComponent(jSeparator2)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblUser)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnCreateUser)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnReadUsers)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnUpdateUser)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnDeleteUser))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblSettings)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnChangeWaitingTime)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnChangeAttempts, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblLogs)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnViewLogs)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnChangeDoorTime)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
                 .addComponent(btnLogOut)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
 
         pack();
@@ -186,6 +217,10 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JButton btnReadUsers;
     private javax.swing.JButton btnUpdateUser;
     private javax.swing.JButton btnViewLogs;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel lblLogs;
     private javax.swing.JLabel lblSettings;
     private javax.swing.JLabel lblTitle;
