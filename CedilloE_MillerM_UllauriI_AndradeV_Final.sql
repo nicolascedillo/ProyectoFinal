@@ -1,36 +1,34 @@
-/*CREATE DATABASE control_prueba
-  DEFAULT CHARACTER SET utf8mb4
-  DEFAULT COLLATE utf8mb4_unicode_ci;*/
+CREATE DATABASE control_prueba;
   
 USE control_acceso;
 
-/*CREATE TABLE datos (
-	id BIGINT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE datos (
+	id INT not null AUTO_INCREMENT PRIMARY KEY,
     waiting_time INT NOT NULL,
     unit_time VARCHAR(30) NOT NULL,
     attempts INT NOT NULL,
     open_door_time INT NOT NULL,
     unit_door_time VARCHAR (30) NOT NULL
-    );*/
+    );
     
-/*INSERT INTO datos (waiting_time,unit_time,attempts,open_door_time,unit_door_time)
+INSERT INTO datos (waiting_time,unit_time,attempts,open_door_time,unit_door_time)
 VALUES 
-  (5,'seg',3,5,'seg');*/
+  (5,'seg',3,5,'seg');
 
-/*CREATE TABLE usuarios (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE usuarios (
+  id INT not null AUTO_INCREMENT PRIMARY KEY,
   user VARCHAR(50) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
   key_pass VARCHAR(100) NOT NULL
-);*/
+);
 
-/*INSERT INTO usuarios (`user`, password, key_pass)
+INSERT INTO usuarios (`user`, password, key_pass)
 VALUES 
     ('admin', '4dm1n', '1234'),
     ('user', 'us3r', '1235'),
-    ('anonymous', 'null', 'null');*/
+    ('anonymous', 'null', 'null');
 
-/*CREATE TABLE logs (
+CREATE TABLE logs (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT NOT NULL,
     fecha_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -38,9 +36,9 @@ VALUES
 
     CONSTRAINT fk_logs_usuario
       FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-);*/
+);
 
-/*INSERT INTO logs (usuario_id, fecha_hora, acceso)
+INSERT INTO logs (usuario_id, fecha_hora, acceso)
 VALUES
 (1, '2025-01-02 01:12:05', 'OK'),
 (1, '2025-01-05 08:15:12', 'OK'),
@@ -91,7 +89,7 @@ VALUES
 (3, '2025-11-02 05:05:55', 'FAIL'),
 (1, '2025-11-13 15:15:15', 'OK'),
 (3, '2025-11-17 18:18:18', 'FAIL'),
-(3, '2025-12-01 20:20:21', 'FAIL');*/
+(3, '2025-12-01 20:20:21', 'FAIL');
 
 -- DESCRIBE usuarios;
 -- DESCRIBE logs;

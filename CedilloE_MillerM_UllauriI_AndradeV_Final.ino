@@ -15,8 +15,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 //SERVO ----------------
 Servo servo;
-const int SERVO_CERRADO = 0;
-const int SERVO_ABIERTO = 90;
+const int SERVO_CERRADO = 90;
+const int SERVO_ABIERTO = 180;
 
 //KEYPAD ----------------
 const byte ROWS = 4;
