@@ -70,7 +70,7 @@ void setup() {
   lcd.init();
   lcd.backlight();
 
-  mostrar("Sistema listo", "Ingrese clave");
+  mostrar("Sistema listo", "Use el keypad");
 }
 
 void loop() {
@@ -93,7 +93,7 @@ void loop() {
       for (long i = tiempoSeg; i > 0; i--) {
         char linea2[16];
         snprintf(linea2, sizeof(linea2), "Tiempo: %lds", i);
-        mostrar("Puerta Abierta", linea2);
+        mostrar("Acceso concedido", linea2);
         delay(1000);
       }
     }
@@ -106,9 +106,9 @@ void loop() {
       beepError();
 
       char linea2[16];
-      sprintf(linea2, "Quedan %d", intentos);
+      sprintf(linea2, "Quedan %d intentos", intentos);
 
-      mostrar("Clave Incorrecta", linea2);
+      mostrar("Codigo INCORRECTO", linea2);
     }
 
     else if (cmd.startsWith("LOCK:")) {
@@ -123,13 +123,13 @@ void loop() {
 
       bloqueado = false;
       digitalWrite(LED_ROJO, LOW);
-      mostrar("Sistema listo", "Ingrese clave");
+      mostrar("Sistema listo", "Use el keypad");
     }
 
     else if (cmd == "RESET") {
       servo.write(SERVO_CERRADO);
       digitalWrite(LED_VERDE, LOW);
-      mostrar("Sistema listo", "Ingrese clave");
+      mostrar("Sistema listo", "Use el keypad");
     }
   }
 
@@ -141,7 +141,8 @@ void loop() {
 
   if (k == '*') {
     index = 0;
-    mostrar("Borrado");
+    memset(buffer, 0, sizeof(buffer)); 
+    mostrar("Borrado","");
     return;
   }
 
@@ -153,6 +154,7 @@ void loop() {
 
     index = 0;
     mostrar("Procesando", "...");
+    memset(buffer, 0, sizeof(buffer));
     return;
   }
 

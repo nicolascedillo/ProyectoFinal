@@ -6,6 +6,7 @@
 package est.ups.edu.ec.cedilloe_millerm_final.config;
 
 import com.fazecast.jSerialComm.SerialPort;
+import com.fazecast.jSerialComm.SerialPortTimeoutException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
@@ -49,17 +50,24 @@ public class ConexionArduino {
         out.write((msg + "\n").getBytes());
         out.flush();
     }
-
+    
     public String leerLinea() throws Exception {
         StringBuilder sb = new StringBuilder();
         int c;
-        while ((c = in.read()) != -1) {
-            if (c == '\n') break;
-            if (c != '\r') sb.append((char) c);
+        try {
+            while ((c = in.read()) != -1) {
+                if (c == '\n') break;
+                if (c != '\r')
+                    sb.append((char) c);
+            }
+            if (sb.length() == 0)
+                return null;
+            return sb.toString();
+        } catch (SerialPortTimeoutException ex) {
+            return null;
         }
-        return sb.toString();
     }
-
+    
     public boolean estaAbierto() {
         return port != null && port.isOpen();
     }

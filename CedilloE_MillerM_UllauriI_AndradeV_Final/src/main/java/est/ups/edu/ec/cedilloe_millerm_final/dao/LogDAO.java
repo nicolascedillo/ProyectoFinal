@@ -66,7 +66,7 @@ public class LogDAO {
 
         String sql = """
             INSERT INTO logs (usuario_id, acceso)
-            VALUES (6, 'FAIL')
+            VALUES (3, 'FAIL')
         """;
 
         try (Connection con = ConexionBDD.getConexion();

@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Conexion BDD");
         coneccionBDD();
         System.out.println("Conexion Arduino");
-        //conexionArduino();
+        conexionArduino();
         
     };
     

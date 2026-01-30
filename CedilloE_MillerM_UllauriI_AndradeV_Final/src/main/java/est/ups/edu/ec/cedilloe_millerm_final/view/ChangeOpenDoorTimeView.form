@@ -134,9 +134,9 @@
                   <Component id="cbxUnitTimeDoor" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="btnChangeDoor" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnCancelDoor" min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="btnChangeDoor" max="32767" attributes="0"/>
+                  <Component id="btnCancelDoor" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>

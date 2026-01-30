@@ -25,6 +25,7 @@ public class ArduinoController {
 
     public ArduinoController() {
         arduino = new ConexionArduino("COM4", 9600);
+        //COM4 compu miller
         usuarioDAO = new UsuarioDAO();
         datosDAO = new DatosDAO();
         logsDAO = new LogDAO();
@@ -39,7 +40,7 @@ public class ArduinoController {
         }
 
         System.out.println("Conectado a Arduino");
-        System.out.println("Esperando códigos...");
+        System.out.println("Esperando codigos...");
 
         new Thread(() -> {
 
@@ -51,7 +52,7 @@ public class ArduinoController {
                     if (!dato.startsWith("CODE:")) continue;
 
                     int codigo = Integer.parseInt(dato.substring(5).trim());
-                    System.out.println("Código recibido: " + codigo);
+                    System.out.println("Codigo recibido: " + codigo);
 
                     boolean valido = usuarioDAO.validarKeyPass(codigo);
 
@@ -90,7 +91,6 @@ public class ArduinoController {
         }).start();
     }
 
-    // 🔁 CONVERSIÓN DE TIEMPO
     private int convertirAMilisegundos(int valor, String unidad) {
         if (unidad == null) return valor * 1000;
 
